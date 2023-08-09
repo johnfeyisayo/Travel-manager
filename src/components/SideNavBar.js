@@ -8,7 +8,6 @@ import { TbReportAnalytics, TbReportMoney } from 'react-icons/tb';
 import { AiOutlineMessage } from 'react-icons/ai';
 import { useState } from 'react';
 import Logo from './images/Logo.png';
-import { Link } from 'react-router-dom';
 
 const SideNavbar = () => {
   const [open, setOpen] = useState(true);
@@ -25,7 +24,7 @@ const SideNavbar = () => {
   return (
     <div
       className={`bg-white h-screen ${
-        open ? 'w-72' : 'w-20'
+        open ? 'w-80' : 'w-20'
       } duration-300 p-4 relative`}
     >
       <BsArrowLeftShort
