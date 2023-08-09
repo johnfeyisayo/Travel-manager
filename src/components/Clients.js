@@ -101,7 +101,7 @@ const Clients = () => {
                   {(filteredTasks.length > 0 ? filteredTasks : tasks).map(
                     (task, index) => (
                       <tr key={task.id}>
-                      <td><Link to={`/task/${task.id}`}>{task.title}</Link></td>
+                      <td><Link to={`/clientprofile/${task.id}`}>{task.title}</Link></td>
                         <td>{task.email}</td>
                         <td>{task.phone}</td>
                         <td>{task.address}</td>

@@ -20,7 +20,7 @@ function App() {
         <Route
           path="clients"
           element={<Clients />}></Route>
-        <Route path="/clientprofile/:task.id" element={<ClientProfile />}></Route>
+        <Route path="/clientprofile/:taskId" element={<ClientProfile />}></Route>
         <Route path="navbar" element={<Navbar />}></Route>
       </Routes>
     </div>
