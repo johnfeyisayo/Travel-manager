@@ -36,23 +36,29 @@ const Login = () => {
           <p className="text-xs">Email</p>
           <input
             type="email"
-            className="border w-full h-10 my-3 px-3"
+            className="border w-full h-10 my-3 px-3 outline-none"
             placeholder="john@gmail.com..."
             {...register('email', { required: 'This is required' })}
           />
-          <p className="text-xs">Password</p>
+          <div className='text-sm -mt-3 text-red-600'>
+          {errors.email?.type === 'required' && 'email is required!'}
+        </div>
+          <p className="text-xs mt-3">Password</p>
           <input
             type="password"
-            className="border w-full h-10 my-3 px-3"
+            className="border w-full h-10 my-3 px-3 outline-none"
             placeholder="password..."
             {...register('password', {
               required: 'This is required',
               minLength: 4,
             })}
           />
+          <div className='text-sm -mt-3 text-red-600'>
+          {errors.password?.type === 'required' && 'password is required!'}
+        </div>
         </div>
         <div className="">
-          <button className="login-button w-2/3 mx-11 h-10 text-white bg-[#e6ac00] hover:bg-[#c49403] cursor-pointer">
+          <button className="login-button w-2/4 mx-20 mt-2 h-10 text-white bg-[#e6ac00] hover:bg-[#c49403] cursor-pointer">
             Login
           </button>
         </div>
