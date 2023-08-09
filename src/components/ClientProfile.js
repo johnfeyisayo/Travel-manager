@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import SideNavbar from './SideNavBar';
 import ProfileImage from './images/Screen Shot 2023-08-09 at 1.15.35 PM.png';
+import { Link } from 'react-router-dom';
 
 const ClientProfile = () => {
   return (
@@ -100,6 +101,13 @@ const ClientProfile = () => {
             </div>
             </div>
           </div>
+          <Link to='/clients'>
+          <div className='text-right'>
+          <button className="login-button w-32 text-sm font-semibold rounded-md mx-11 h-10 text-white bg-[#e6ac00] hover:bg-[#c49403] cursor-pointer">
+            Back
+          </button>
+          </div>
+          </Link>
           </div>
       </div>
       </div>
