@@ -67,16 +67,16 @@ const Clients = () => {
             <h1 className="mt-20 text-xl font-semibold">Clients</h1>
             <p className="text-gray-400 mt-3">Here&apos;s the client list</p>
           </div>
-          <div className="w-11/12 border mt-4 bg-white rounded-md pt-8 p-7">
+          <div className="w-11/12 mt-4 bg-white rounded-md pt-8 p-7">
             <div>
-              <div className="flex border">
+              <div className="flex justify-between border w-11/12 border-slate-50">
                 <div>
                   <input
                     type="text"
-                    placeholder="Search by  name"
+                    placeholder="Search by name..."
                     value={searchTerm}
                     onChange={handleSearchChange}
-                    className="border rounded-md h-10 pl-3 w-48 border-gray-400 "
+                    className="border rounded-md h-10 pl-3 w-96 text-sm outline-none"
                   />
                 </div>
                 <div className="">
@@ -88,9 +88,9 @@ const Clients = () => {
                   </button>
                 </div>
               </div>
-              <table className="my-12">
-                <thead>
-                  <tr className="bg-[#f9f4e1]  rounded-s-xl border-b-2 border-b-[#e6ac00] text-sm">
+              <table className="my-12 text-xs w-11/12 h-80">
+                <thead className=''>
+                  <tr className="bg-[#f9f4e1] text-left border-b-2 border-b-[#e6ac00] text-xs">
                     <th>Name</th>
                     <th>Email</th>
                     <th>Phone</th>
@@ -101,10 +101,10 @@ const Clients = () => {
                   {(filteredTasks.length > 0 ? filteredTasks : tasks).map(
                     (task, index) => (
                       <tr key={task.id}>
-                      <td><Link to={`/clientprofile/${task.id}`}>{task.title}</Link></td>
+                      <td className=''><Link to={`/clientprofile/${task.id}`}>{task.name}</Link></td>
                         <td>{task.email}</td>
                         <td>{task.phone}</td>
-                        <td>{task.address}</td>
+                        <td className='w-44'>{task.address}</td>
                       </tr>
                     ),
                   )}
