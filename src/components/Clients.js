@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 
 const Clients = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [filteredTasks, setFilteredTasks] = useState([]);
-  const [tasks, setTasks] = useState([
+  const [filteredClients, setFilteredClients] = useState([]);
+  const clients = [
     {
       title: 'Name',
-      name: 'Adegoke Olonode',
+      name: 'Adegoke Oluwadailare',
       email: 'adegoketemitope1909@gmail.com',
       phone: '08160730668',
       address: 'No 2, olonode close, Monato, Ibadan, Oyo State, Nigeria',
@@ -19,7 +19,7 @@ const Clients = () => {
 
     {
       title: 'Email',
-      name: 'Adeyemi Olonode',
+      name: 'Adeyemi Oluwadailare',
       email: 'adegoketemitope1909@gmail.com',
       phone: '08160730668',
       address: 'No 2, olonode close, Monato, Ibadan, Oyo State, Nigeria',
@@ -28,7 +28,7 @@ const Clients = () => {
 
     {
       title: 'Phone',
-      name: 'Adetola Olonode',
+      name: 'Adetola Oluwadailare',
       email: 'adegoketemitope1909@gmail.com',
       phone: '08160730668',
       address: 'No 2, olonode close, Monato, Ibadan, Oyo State, Nigeria',
@@ -36,33 +36,49 @@ const Clients = () => {
     },
     {
       title: 'Residential',
-      name: 'Ademola Olonode',
+      name: 'Ademola Oluwadailare',
       email: 'adegoketemitope1909@gmail.com',
       phone: '08160730668',
       address: 'No 2, olonode close, Monato, Ibadan, Oyo State, Nigeria',
       link: '/clientprofile',
     },
-  ]);
+    {
+      title: 'Residential',
+      name: 'Ademola Oluwadailare',
+      email: 'adegoketemitope1909@gmail.com',
+      phone: '08160730668',
+      address: 'No 2, olonode close, Monato, Ibadan, Oyo State, Nigeria',
+      link: '/clientprofile',
+    },
+    {
+      title: 'Residential',
+      name: 'Ademola Oluwadailare',
+      email: 'adegoketemitope1909@gmail.com',
+      phone: '08160730668',
+      address: 'No 2, olonode close, Monato, Ibadan, Oyo State, Nigeria',
+      link: '/clientprofile',
+    },
+  ];
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
 
   const handleSearchClick = () => {
-    const filtered = tasks.filter((task) =>
+    const filtered = clients.filter((task) =>
       task.name.toLowerCase().includes(searchTerm.toLowerCase()),
     );
-    setFilteredTasks(filtered);
+    setFilteredClients(filtered);
   };
 
   return (
-    <div className="">
+    <div>
       <Navbar />
       <div className="flex">
         <div>
           <SideNavbar />
         </div>
-        <div className=" bg-slate-50 w-full pl-16">
+        <div className="bg-slate-50 w-full pl-16">
           <div>
             <h1 className="mt-20 text-xl font-semibold">Clients</h1>
             <p className="text-gray-400 mt-3">Here&apos;s the client list</p>
@@ -79,7 +95,7 @@ const Clients = () => {
                     className="border rounded-md h-10 pl-3 w-96 text-sm outline-none"
                   />
                 </div>
-                <div className="">
+                <div>
                   <button
                     onClick={handleSearchClick}
                     className="border bg-[#e6ac00] w-32 h-10 rounded-md text-white font-semibold"
@@ -89,7 +105,7 @@ const Clients = () => {
                 </div>
               </div>
               <table className="my-12 text-xs w-11/12 h-80">
-                <thead className=''>
+                <thead>
                   <tr className="bg-[#f9f4e1] text-left border-b-2 border-b-[#e6ac00] text-xs">
                     <th>Name</th>
                     <th>Email</th>
@@ -98,13 +114,17 @@ const Clients = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {(filteredTasks.length > 0 ? filteredTasks : tasks).map(
+                  {(filteredClients.length > 0 ? filteredClients : clients).map(
                     (task, index) => (
-                      <tr key={task.id}>
-                      <td className=''><Link to={`/clientprofile/${task.id}`}>{task.name}</Link></td>
+                      <tr key={index}>
+                        <td>
+                          <Link to={`/clientprofile/${task.id}`}>
+                            <div className="hover:underline">{task.name}</div>
+                          </Link>
+                        </td>
                         <td>{task.email}</td>
                         <td>{task.phone}</td>
-                        <td className='w-44'>{task.address}</td>
+                        <td className="w-44">{task.address}</td>
                       </tr>
                     ),
                   )}
