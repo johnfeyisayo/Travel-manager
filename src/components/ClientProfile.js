@@ -40,79 +40,91 @@ const ClientProfile = () => {
             <div className="flex leading-8 w-11/12 text-xs justify-between mt-12 ">
               <div>
                 <div>
-                  <p>Full Name</p>
-                  <p>Odusote Mayokun</p>
+                  <p className="text-gray-400 font-semibold">Full Name</p>
+                  <p className="font-bold text-sm">Odusote Mayokun</p>
                 </div>
                 <div>
-                  <p>
+                  <p className="text-gray-400 font-semibold">
                     Application Fullname{' '}
                     <span className="text-red-500">as shown in passport</span>
                   </p>
-                  <p>Odusote Mayokun Kemi</p>
+                  <p className="font-bold text-sm">Odusote Mayokun Kemi</p>
                 </div>
                 <div>
-                  <p>Place Of Birth</p>
-                  <p>Nigeria</p>
+                  <p className="text-gray-400 font-semibold">Place Of Birth</p>
+                  <p className="font-bold text-sm">Nigeria</p>
                 </div>
                 <div>
-                  <p>Date Of Birth</p>
+                  <p className="text-gray-400 font-semibold">Date Of Birth</p>
                   <p>04/11/12</p>
                 </div>
                 <div>
-                  <p>Marital Status</p>
-                  <p>Married</p>
+                  <p className="text-gray-400 font-semibold">Marital Status</p>
+                  <p className="font-bold text-sm">Married</p>
                 </div>
                 <div>
-                  <p>Current Occupation</p>
-                  <p>Engineer</p>
+                  <p className="text-gray-400 font-semibold">
+                    Current Occupation
+                  </p>
+                  <p className="font-bold text-sm">Engineer</p>
                 </div>
                 <div>
-                  <p>Residential Address</p>
-                  <p>
+                  <p className="text-gray-400 font-semibold">
+                    Residential Address
+                  </p>
+                  <p className="font-bold text-sm">
                     No 2, Oloro Street Bank Olodo, Ibadan, Oyo State, Nigeria
                   </p>
                 </div>
                 <div>
-                  <p>Country Of Interest</p>
-                  <p>Iceland</p>
+                  <p className="text-gray-400 font-semibold">
+                    Country Of Interest
+                  </p>
+                  <p className="font-bold text-sm">Iceland</p>
                 </div>
               </div>
 
               <div>
                 <div>
-                  <p>Email</p>
-                  <p>adegoketemitope1909@abc.com</p>
+                  <p className="text-gray-400 font-semibold">Email</p>
+                  <p className="font-bold text-sm">
+                    adegoketemitope1909@abc.com
+                  </p>
                 </div>
                 <div>
-                  <p>Gender</p>
-                  <p>Female</p>
+                  <p className="text-gray-400 font-semibold">Gender</p>
+                  <p className="font-bold text-sm">Female</p>
                 </div>
                 <div>
-                  <p>Country Of Citizenship</p>
-                  <p>Nigeria, Uganda</p>
+                  <p className="text-gray-400 font-semibold">
+                    Country Of Citizenship
+                  </p>
+                  <p className="font-bold text-sm">Nigeria, Uganda</p>
                 </div>
                 <div>
-                  <p>
+                  <p className="text-gray-400 font-semibold">
                     Education{' '}
                     <span className="text-red-500">
                       Client&apos;s Highest Level of Education
                     </span>
                   </p>
-                  <p>Bachelor&apos;s Degree</p>
+                  <p className="font-bold text-sm">Bachelor&apos;s Degree</p>
                 </div>
                 <div>
-                  <p>Phone Number</p>
-                  <p>+234(0)8160730668</p>
+                  <p className="text-gray-400 font-semibold">Phone Number</p>
+                  <p className="font-bold text-sm">+234(0)8160730668</p>
                 </div>
                 <div>
-                  <p>Mailing Address</p>
-                  <p>
+                  <p className="text-gray-400 font-semibold">Mailing Address</p>
+                  <p className="font-bold text-sm">
                     No 2, Oloro Street Bank Olodo, Ibadan, Oyo State, Nigeria
                   </p>
                 </div>
                 <div>
-                  <p>Purpose Of Traveling</p>
-                  <p>Trading</p>
+                  <p className="text-gray-400 font-semibold">
+                    Purpose Of Traveling
+                  </p>
+                  <p className="font-bold text-sm">Trading</p>
                 </div>
               </div>
             </div>
